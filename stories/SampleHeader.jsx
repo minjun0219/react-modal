@@ -5,7 +5,8 @@ const styles = {
   width: '100%',
   borderBottom: '1px solid rgba(0, 0, 0, .1)',
   lineHeight: '48px',
-  textAlign: 'center'
+  textAlign: 'center',
+  background: '#fff',
 };
 
 const SampleHeader = () => (

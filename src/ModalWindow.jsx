@@ -29,17 +29,15 @@ class ModalWindow extends React.PureComponent {
 
   render() {
     const {
-      isOpen,
       isAlignCenter,
       isStickyFooter,
       header,
       footer,
       children,
-      onAfterOpen,
-      onRequestClose
+      ...props
     } = this.props;
     return (
-      <Modal>
+      <Modal {...props}>
         <div className={styles.container}>
           <div className={styles.header}>
             {header}
@@ -58,4 +56,4 @@ class ModalWindow extends React.PureComponent {
   }
 }
 
-export default Modal;
+export default ModalWindow;
