@@ -1,0 +1,27 @@
+{
+  "name": "wadiz-react-modal",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "start-storybook -p 9001 -c .storybook"
+  },
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "react": "^16.5.0",
+    "react-dom": "^16.5.0",
+    "react-modal": "^3.5.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "@storybook/addon-knobs": "^3.4.10",
+    "@storybook/addon-viewport": "^3.4.10",
+    "@storybook/react": "^3.4.10",
+    "babel-core": "^6.26.3",
+    "css-loader": "^1.0.0",
+    "dart-sass": "^1.13.2",
+    "fibers": "^3.0.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.0",
+    "url-loader": "^1.1.1"
+  }
+}

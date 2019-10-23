@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 80%;
+
+  .header,
+  .footer {
+    pointer-events: none;
+
+    > * {
+      pointer-events: auto;
+    }
+  }
+
+  .header {
+    @media screen and (min-width: 767px) {
+      position: sticky;
+      position: -webkit-sticky;
+      top: 0;
+    }
+  }
+
+  .content {
+    flex: 1;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .footer.sticky {
+    @media screen and (min-width: 767px) {
+      position: sticky;
+      position: -webkit-sticky;
+      bottom: 0;
+    }
+  }
+}

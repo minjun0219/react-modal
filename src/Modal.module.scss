@@ -1,0 +1,165 @@
+// /* stylelint-disable plugin/z-index-value-constraint */
+
+// .modal-wrap-html,
+// .modal-wrap-body {
+//   // empty
+// }
+
+// .modal-wrap-portal {
+//   position: static;
+// }
+
+// .modal-wrap-overlay,
+// .modal-wrap-content {
+//   transition-duration: 80ms;
+// }
+
+// .modal-wrap-overlay {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   transition-property: opacity;
+//   opacity: 0;
+//   z-index: 20000;
+//   background: rgba(#000, .6);
+//   width: 100%;
+//   height: 100%;
+//   overflow-x: hidden;
+//   overflow-y: auto;
+//   -webkit-overflow-scrolling: touch;
+
+//   &-after-open {
+//     opacity: 1;
+//   }
+
+//   &-before-close {
+//     opacity: 0;
+//   }
+// }
+
+// .modal-wrap-content {
+//   position: relative;
+//   transform: translateY(30px);
+//   transition-property: opacity, transform;
+//   transition-timing-function: ease-out;
+//   outline: none;
+
+//   @include breakpoint-small {
+//     transform: scale(.95);
+//   }
+
+//   &-after-open {
+//     transform: none;
+//   }
+
+//   &-before-close {
+//     transform: translateY(30px);
+//     opacity: 0;
+
+//     @include breakpoint-small {
+//       transform: scale(.95);
+//     }
+//   }
+// }
+
+.html,
+.portal {
+  // empty
+}
+
+.body {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.overlay,
+.window {
+  transition-duration: 80ms;
+}
+
+.overlay {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 20000;
+  transition-property: background-color;
+  background-color: rgba(#fff, 0);
+  text-align: center;
+  box-sizing: border-box;
+
+  @media screen and (min-width: 767px) {
+    background-color: rgba(#000, 0);
+  }
+
+  &.alignCenter {
+    @media screen and (min-width: 767px) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &AfterOpen {
+    background-color: rgba(#fff, 1);
+
+    @media screen and (min-width: 767px) {
+      background-color: rgba(#000, .6);
+      overflow-x: hidden;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+  }
+
+  &BeforeClose {
+    background-color: rgba(#fff, 0);
+
+    @media screen and (min-width: 767px) {
+      background-color: rgba(#000, 0);
+    }
+  }
+}
+
+.window {
+  display: block;
+  position: relative;
+  margin: 0;
+  opacity: 0;
+  transition-property: transform, opacity;
+  // background: #fff;
+  min-width: 300px;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+
+  @media screen and (min-width: 767px) {
+    display: inline-block;
+    // margin: 5%;
+    // transform: scale(.95);
+    // box-shadow: 0 2px 6px rgba(0,0,0,.4);
+    width: auto;
+    height: auto;
+  }
+
+  &AfterOpen {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+
+  &BeforeClose {
+    opacity: 0;
+
+    // @media screen and (min-width: 767px) {
+    //   transform: scale(.95);
+    // }
+  }
+
+  &.scrollFixed {
+    overflow-y: visible;
+    -webkit-overflow-scrolling: none;
+  }
+}
